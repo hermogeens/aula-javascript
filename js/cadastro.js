@@ -1,3 +1,14 @@
+
+
+function validaCampo(valor,id, mensagem) {
+    if (ehNumero(valor)) {
+        valor = parseInt(valor);
+        return valor;
+    } else {
+        document.getElementById(id).style.color = 'red';
+        document.getElementById(id).innerHTML = mensagem;
+    } return 0;
+}
 function cadastrar() {
     let formulario=[];
 
@@ -20,4 +31,12 @@ function cadastrar() {
     formulario.push(sexo);
 
     console.log(formulario);
+    limparFormulario()
+
+    function limparFormulario(){
+        document.getElementById('nome').value = "";
+        document.getElementById('fone').value = "";
+        document.getElementById('masc').checked = true;
+        document.getElementById('nome').focus();
+    }
 }
