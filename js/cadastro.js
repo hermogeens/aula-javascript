@@ -1,7 +1,7 @@
 
 
 function validaCampo(valor,id, mensagem) {
-    if (ehNumero(valor)) {
+    if (!isNaN(valor)) {
         valor = parseInt(valor);
         return valor;
     } else {
